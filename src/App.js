@@ -1,5 +1,5 @@
 import QuizStart from './components/QuizStart';
-import Preloader from './components/Preloader.js';
+import Preloader from './components/Preloader';
 import Question from './components/Question';
 import Buttons from './components/Buttons';
 import { useEffect, useState } from 'react';
@@ -13,7 +13,6 @@ export default function App() {
 	const [isCheck, setIsCheck] = useState(false);
 	const [isLoad, setIsLoad] = useState(false);
 	const [questionElements, setQuestionElements] = useState("");
-	// console.log(questionsArr)
 
 	function getData() {
 		fetch('https://opentdb.com/api.php?amount=5&type=multiple&category=9')

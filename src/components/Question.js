@@ -6,12 +6,6 @@ export default function Question(props) {
     const decodeHtmlCharCodes = str => he.decode(str)
     const question = decodeHtmlCharCodes(props.question)
     
-    // const decodeHtmlCharCodes = str => str.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
-    //                                         String.fromCharCode(charCode)
-    //                                     );                              
-    // const question = decodeHtmlCharCodes(props.question).replace(/&quot;/g, '\"').replace(/&(\d+);/g, '\"')
-    // const displayAnswer = decodeHtmlCharCodes(answer).replace(/&quot;/g, '\"').replace(/(&(\d+);)/g, '\"')
-    // console.log(he.decode(str));
     const optionElements = wrongAnswers.map(answer => {
         const displayAnswer = decodeHtmlCharCodes(answer)
         const optionClasses = ["option"]
